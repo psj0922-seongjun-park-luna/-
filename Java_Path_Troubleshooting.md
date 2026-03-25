@@ -41,3 +41,15 @@ C:\Users\박성준>java -version
 java version "21.0.10" 2026-01-20 LTS
 Java(TM) SE Runtime Environment (build 21.0.10+8-LTS-217)
 Java HotSpot(TM) 64-Bit Server VM (build 21.0.10+8-LTS-217, mixed mode, sharing)
+
+
+---
+
+# 🛠️ Troubleshooting: printf 포맷팅 출력 오류 해결
+
+## 1. 문제 상황 (Issue)
+이클립스에서 아래의 `printf` 코드를 실행했을 때, 문법 오류(Red Line)가 발생하거나 정상적으로 출력되지 않음.
+
+**[오류 발생 코드]**
+```java
+System.out.printf("이름:%s, 성별:%c, 나이:%d, 키:%.2f", "홍길동", '남', 20, 184.3);
