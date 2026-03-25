@@ -69,3 +69,33 @@
 
 ## 💡 엔지니어의 한 줄 팁
 현업에서는 **Eclipse**나 **IntelliJ** 같은 개발 도구(IDE)가 컴파일과 실행을 자동으로 처리해 줍니다. 하지만 내부적으로는 위와 같이 `javac`와 `java` 명령어가 돌아간다는 원리를 아는 것이 중요합니다.
+# 📔 Java 실습 01: 개발 환경 및 기초 문법 (2026-03-25)
+
+
+---
+
+## 1. 개발 도구 (Eclipse) 설정
+- **작업 디렉터리:** `C:\cloud_engineering\java21_study\eclipse\workspace`
+- **실행 파일:** `eclipse.exe`
+- **환경 확인:** `Window > Preferences`에서 컴파일러 및 JRE 설정 확인.
+
+## 2. 프로젝트 및 클래스 생성 규칙
+- **Java Project:** `File > New > Java Project` (※ Module 체크 해제 필수)
+- **Class 생성:** `Name`은 파일명과 일치해야 하며, `public static void main` 체크.
+- **실행:** `Run As > Java Application` (콘솔 출력 확인)
+
+## 3. 자바 식별자 (Identifier)
+1. **시스템 정의 식별자 (예약어):** 시스템이 미리 정의한 단어 (예: `public`, `class`, `static`). 수정 시 에러 발생.
+2. **사용자 정의 식별자:** 개발자가 명명하는 클래스, 변수, 메서드명.
+   - 클래스명은 반드시 **대문자**로 시작.
+   - 의미 있는 명사형 권장 및 파일명과 일치 필수.
+   - 특수문자는 `_`, `$`만 허용.
+
+## 4. main 메서드 및 API
+- **main:** 프로그램의 시작점(Starting Point). 어플리케이션당 단 하나 존재.
+- **Java API:** 개발을 돕는 클래스 묶음 (`.jar` 형태). `System`, `String` 등이 대표적임.
+
+## 5. 데이터 출력 (Standard Output)
+1. `System.out.println()`: 출력 후 줄 바꿈.
+2. `System.out.print()`: 줄 바꿈 없이 출력.
+3. `System.out.printf()`: 포맷 지정 출력 (형식과 값의 일치 필요).
