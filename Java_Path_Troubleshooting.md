@@ -1,0 +1,43 @@
+# ☕ Java SE 21 설치 및 환경 변수 설정 기록 (2026-03-25)
+
+자바 개발 및 클라우드 인프라 관리를 위한 가장 기초 단계인 **JDK 21(LTS)** 설치와 환경 변수 설정을 완료했습니다.
+
+## ⚙️ 1. 설치 환경 및 버전 확인
+- **운영체제:** Windows 10
+- **설치 버전:** Java(TM) SE Development Kit 21.0.10 (LTS)
+- **설치 경로:** `C:\Program Files\Java\jdk-21.0.10`
+
+---
+
+## 🛠️ 2. 환경 변수(Environment Variables) 설정
+어느 위치에서든 자바 명령어를 실행할 수 있도록 시스템 변수를 설정했습니다.
+
+### ① JAVA_HOME 설정
+- **변수 이름:** `JAVA_HOME`
+- **변수 값:** `C:\Program Files\Java\jdk-21.0.10` (JDK 설치 폴더 주소)
+
+### ② Path 등록 (우선순위 조정)
+- **추가 내용:** `%JAVA_HOME%\bin` (또는 실제 bin 폴더 경로)
+- **중요 사항:** 기존에 등록된 `Oracle\Java\javapath`보다 **가장 높은 순위(맨 위)**로 이동시켜 JDK 21이 우선 실행되도록 설정함.
+
+---
+
+## ⚠️ 3. 트러블슈팅 (문제 해결 과정)
+환경 설정 중 발생한 문제를 분석하고 해결한 기록입니다.
+
+- **[현상]** `Path`를 추가했음에도 `java -version` 입력 시 경로가 잡히지 않거나 오류 발생.
+- **[원인]** 윈도우 시스템의 `Path` 목록 중 기존 Oracle 기본 경로가 최상단에 있어 새로 추가한 경로가 무시됨.
+- **[해결]** 1. 시스템 환경 변수 편집 창 진입.
+  2. `Path` 편집 모드에서 `jdk-21.0.10\bin` 항목을 클릭 후 **[위로 이동]** 버튼으로 최상단 배치.
+  3. CMD 창을 완전히 종료 후 재실행하여 적용 확인.
+
+---
+
+## ✅ 4. 최종 확인 (Verification)
+CMD(명령 프롬프트)에서 아래 명령어를 통해 정상 작동을 확인했습니다.
+
+```cmd
+C:\Users\박성준>java -version
+java version "21.0.10" 2026-01-20 LTS
+Java(TM) SE Runtime Environment (build 21.0.10+8-LTS-217)
+Java HotSpot(TM) 64-Bit Server VM (build 21.0.10+8-LTS-217, mixed mode, sharing)
