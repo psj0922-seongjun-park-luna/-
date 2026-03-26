@@ -10,5 +10,4 @@
 - **OS:** Linux (Ubuntu, CentOS)
 - **Tools:** Git, GitHub, Docker
 
-### 🌱 TIL (Today I Learned)
-3월25일 웹 개발 기본
+
